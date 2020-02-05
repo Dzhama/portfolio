@@ -4,65 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link type="text/css rel="stylesheet" href="styles.css">
-    <title>Dzhama</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>Document</title>
 </head>
 <body>
-    <!-- Navigaton -->
     <nav class="nav">
-        <!-- Menu list items -->
-        <div class="nav__menu">
-            <ul class="nav__list">
-                <li class="nav__item">Home</li>
-                <li class="nav__item">Projects</li>
-                <li class="nav__item">Skils</li>
-                <li class="nav__item">Contacts</li>
-            </ul>
+        <input type="checkbox" id="nav-check">
+        
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
         </div>
-        <!-- Icons list -->
-        <div class="nav__icons">
-            <ul class="nav___list">
-                <li class="nav__icon"></li>
-                <li class="nav__icon"></li>
-                <li class="nav__icon"></li>
-            </ul>
+        
+        <div class="nav-links">
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#projects">PROJECTS</a>
+          <a href="#resume">RESUME</a>
         </div>
     </nav>
-    <!-- Header -->
-    <header class="header">
-        <h1>Dzhama Shoismatuloev</h1>
-        <h2>Full Stock Web Developer</h2>
-        <button class="header-explore">Explore</button>
-        <div class="arrow"></div>
-    </header>
-    <!-- Projects -->
-    <section class="projects">
-        <div class="projects__main">
-            <h2 class="projects__header">Skills</h2>
-            <p class="projects__text">Some of the latest project i have been working on. Full list of the project you can find on my GitHub page.</p>
-            <button class="projects_btn">GitHub</button>
-        </div>
-        <div class="projecs__list">
-            <img src="" alt="Bla" class="projects___item">
-            <img src="" alt="Bla" class="projects___item">
-            <img src="" alt="Bla" class="projects___item">
-            <img src="" alt="Bla" class="projects___item">
-        </div>
-    </section>
-    <section class="skills">
-        <div class="projects__main">
-            <h2 class="projects__header">Projects</h2>
-            <p class="projects__text">Everyday we work hard to make our life better and happier.</p>
-        </div>
-    </section>
-    <!-- Contacts -->
-    <section class="contact">
+    <main class="main"> 
+        <header class="header" id="home">
+            <h1 class="header-name">Dzhama Shoismatuloev</h1>
+            <h2 class="header-position">FULL STOCK WEB DEVELOPER</h2>
+            <button class="btn header-btn">Explore</button>
+        </header>
+        <section class="about" id="about">
 
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
+        </section>
+        <section class="projects" id="projects" >
+
+        </section>
+    </main>
+    <footer class="footer" id="footer">
 
     </footer>
-    <script src="./index.js"></script>
 </body>
 </html>

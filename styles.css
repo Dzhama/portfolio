@@ -1,0 +1,147 @@
+
+/* Global style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+  body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* NAVIGATION STYLE */
+  .nav {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 14px;
+    height: 100%;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 16px 10px;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .nav > .nav-links > a:last-child {
+    margin-right: 20px;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(88, 28, 255, 0.856);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  /* NAVIGATION MOBILE STYLE */
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+      height: fit-content;
+    }
+
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(250px - 50px);
+      overflow-y: auto;
+      overflow: hidden
+    }
+
+    .nav  .nav-links  a:visited ~ .nav-links {
+        height: 0px;
+     }
+  }
+
+  /*  MAIN SECTION STYLE  */
+
+  /* MAIN SECTION STRUCTURE */
+  .main {
+      display: flex;
+      flex-direction: column;
+  }
+  .header {
+    height: calc(100vh - 50px);
+    margin-top: 50px;
+    background-color: lightgrey;
+  }
+  .about {
+    height: calc(100vh - 50px);
+    background-color: lightblue;
+  }
+  .projects {
+    height: calc(100vh - 50px);
+    
+    background-color: lightpink;
+  }
+  .contact {
+    height: calc(100vh - 50px);
+    background-color: lightcoral;
+  }
+
+  /* HEADER SECTION */
+
+  .header {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: url(./images/apple1.jpg) no-repeat center fixed;
+      background-origin: content-box;
+      background-size: cover;
+  }
