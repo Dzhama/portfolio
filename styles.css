@@ -5,58 +5,60 @@
     margin: 0;
     padding: 0;
 }
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+}
+body {
+  margin: 0px;
+  
+  
+}
+  
+/* NAVIGATION STYLE */
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+}
 
-  body {
-    margin: 0px;
-    font-family: 'Noto Sans JP', sans-serif;
-   
-  }
-  
-  /* NAVIGATION STYLE */
-  .nav {
-    height: 50px;
-    width: 100%;
-    background-color: black;
-    position: fixed;
-  }
-  
-  .nav > .nav-btn {
-    display: none;
-  }
-  
-  .nav > .nav-links {
-    display: inline;
-    float: right;
-    font-size: 14px;
-    height: 100%;
-    transition: all .5s;
-  }
-  
-  .nav > .nav-links > a {
-    display: inline-block;
-    padding: 16px 10px;
-    text-decoration: none;
-    color: white;
-    height: 100%;
-    letter-spacing: 2px;
-    text-align: center;
-  }
+.nav > .nav-btn {
+  display: none;
+}
 
-  .nav > .nav-links > a:last-child {
-    margin-right: 20px;
-  }
-  
-  .nav > .nav-links > a:hover {
-    background-color: rgba(166,166,166,1);
-  }
-  
-  .nav > #nav-check {
-    display: none;
-  }
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 1.4rem;
+  transition: all .5s;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 16px 10px;
+  text-decoration: none;
+  color: white;
+  height: 100%;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.nav > .nav-links > a:last-child {
+  margin-right: 20px;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(166,166,166,1);
+}
+
+.nav > #nav-check {
+  display: none;
+}
   
   /* NAVIGATION MOBILE STYLE */
   
-  @media (max-width:600px) {
+  @media (max-width:620px) {
     .nav > .nav-btn {
       display: inline-block;
       position: absolute;
@@ -109,6 +111,7 @@
      }
   }
 
+ 
   /*  MAIN SECTION STYLE  */
 
   /* MAIN SECTION STRUCTURE */
@@ -129,7 +132,7 @@
   }
   .projects {
     height: 100vh;
-    
+    padding-top: 50px;
     background-color: lightpink;
   }
 
@@ -146,18 +149,18 @@
       background-size: cover;
   }
   .header-name {
-      font-size: 48px;
+      font-size: 4.8rem;
       letter-spacing: 5px;
   }
   .header-position {
-      font-size: 20px;
+      font-size: 2rem;
       letter-spacing: 5px;
       margin-top: 20px;
       margin-bottom: 200px;
       color: rgba(166,166,166,1);
   }
   .btn {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 4px;
     border: 1px solid white;
@@ -176,7 +179,33 @@
     outline: none !important;
   }
 
-  /*  ABOUT SECTION  */
+  /* HEADER MOBILE STYLE  width 730*/
+  @media (max-width:730px) {
+    .header-name {
+      font-size: 3.8rem;
+    }
+    .header-position {
+      font-size: 1.62rem;
+    }
+    .btn {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 10px 30px;
+      transition: all .5s;
+    }
+  }
+  /* HEADER MOBILE STYLE  width 600*/
+  @media (max-width:620px) {
+    .header {
+      text-align: center;
+    }
+  }
+
+
+  /*  CARDS  SECTION  */
 
   .wrapper {
       width: 80%;
@@ -186,7 +215,7 @@
       flex-direction: column;
   }
   .wrapper-title {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px;
     margin: 20px;
@@ -203,19 +232,45 @@
   .card {
       height: 60%;
       width: 30%;
-      background-color: magenta;
+      background-color: lightgrey;
       border-radius: 5px;
   }
 
-  @media (max-width:800px) { 
+  @media (max-width:900px) { 
+ 
     .card-wrapper {
-        flex-direction: column;
-  
+      flex-direction: column;
+      height: fit-content;
     }
     .card {
-      width: 80%;
-      background-color: magenta;
-      border-radius: 5px;
-      margin: 20px auto ;
+      width: 300px;
+      margin: 10px auto;
     }
+    .card:last-child {
+      margin-bottom: 150px;
+    }
+    .wrapper-title{
+      margin: 10px auto;
+    }
+  }
+
+  /*  ABOUT SECTION  */
+  .about-card {
+    padding: 15px 25px;
+    font-size: 1.6rem;
+  }
+
+  .about-card h3 {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+  }
+
+  .about-list {
+    padding: 15px 10px;
+    font-style: italic;
+  }
+  
+
+  .about-item {
+    padding-bottom: 5px;
   }
