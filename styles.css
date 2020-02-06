@@ -58,7 +58,10 @@ body {
   
   /* NAVIGATION MOBILE STYLE */
   
-  @media (max-width:620px) {
+  @media only screen and (max-width: 600px) {
+    .nav {
+      background-color: #333;
+    }
     .nav > .nav-btn {
       display: inline-block;
       position: absolute;
@@ -72,7 +75,7 @@ body {
       padding: 13px;
     }
     .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: #333;
     }
     .nav > .nav-btn > label > span {
       display: block;
@@ -118,23 +121,28 @@ body {
   .main {
       display: flex;
       flex-direction: column;
+      background: url(./images/apple1.jpg) no-repeat center fixed;
+      background-origin: content-box;
+      background-size: cover;
     
   }
   .header {
     height: calc(100vh - 50px);
     margin-top: 50px;
-    background-color: rgba(166,166,166,1);
+    background-color: transparent;
   }
   .about {
-    height: 100vh;
+    height: 100%;
     background-color: #FFFFFF;
-    padding-top: 50px;
+    padding: 50px 0px 80px 0px;
   }
   .projects {
-    height: 100vh;
+    height: fit-content;
     padding-top: 50px;
-    background-color: lightpink;
+    padding-bottom: 50px;
+    background-color: transparent;
   }
+
 
   /* HEADER SECTION */
 
@@ -144,9 +152,7 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: url(./images/apple1.jpg) no-repeat center fixed;
-      background-origin: content-box;
-      background-size: cover;
+
   }
   .header-name {
       font-size: 4.8rem;
@@ -171,16 +177,14 @@ body {
   .btn:hover {
     cursor: pointer;
     background-color: lightgray;
-    -webkit-box-shadow: 2px 2px 5px 1px rgba(166,166,166,1);
-    -moz-box-shadow: 2px 2px 5px 1px rgba(166,166,166,1);
-    box-shadow: 2px 2px 5px 1px rgba(166,166,166,1);
+    box-shadow: 0 5px 10px 0 rgba(100, 133, 167, 0.384);
   }
   .btn:focus {
     outline: none !important;
   }
 
-  /* HEADER MOBILE STYLE  width 730*/
-  @media (max-width:730px) {
+  /* HEADER MOBILE STYLE  width 730 */
+  @media only screen and (max-width: 730px) {
     .header-name {
       font-size: 3.8rem;
     }
@@ -197,10 +201,11 @@ body {
       transition: all .5s;
     }
   }
-  /* HEADER MOBILE STYLE  width 600*/
-  @media (max-width:620px) {
-    .header {
+  /* HEADER MOBILE STYLE  width 600 */
+  @media only screen and (max-width: 600px) {
+    .header-name {
       text-align: center;
+      font-size: 3.4rem;
     }
   }
 
@@ -218,7 +223,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 20px;
+    margin: 18px;
     color: black;
   }
 
@@ -230,27 +235,34 @@ body {
   }
 
   .card {
-      height: 60%;
+      height: 250px;
       width: 30%;
+      max-width: 350px;
       background-color: lightgrey;
       border-radius: 5px;
   }
 
-  @media (max-width:900px) { 
+  /* CARD SECTION MOBILE VERSION */
+  
+  @media only screen and (max-width: 900px) { 
  
     .card-wrapper {
       flex-direction: column;
       height: fit-content;
+      align-items: center;
     }
     .card {
       width: 300px;
       margin: 10px auto;
     }
     .card:last-child {
-      margin-bottom: 150px;
+      margin-bottom: 50px;
     }
     .wrapper-title{
-      margin: 10px auto;
+      margin: 5px auto;
+    }
+    .card:last-child {
+      margin-bottom: 0px;
     }
   }
 
@@ -273,4 +285,69 @@ body {
 
   .about-item {
     padding-bottom: 5px;
+  }
+
+  /* PROJECT SECTION */
+  .project-title {
+    color: white;
+  }
+  .project-card {
+    height: 300px;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  .project-card:hover {
+    box-shadow: 0 5px 10px 0 rgba(100, 133, 167, 0.384);
+  }
+
+  .project-card__image {
+    height: 70%;
+    width: 100%;
+    background: url(./images/Natours.png) no-repeat center;
+    background-size: cover;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .project-card__info {
+    padding: 15px;
+  }
+  .project-card__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .project-card__heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    vertical-align: middle;
+  }
+  .project-card__github {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .project-card__github a {
+    text-decoration: none;
+    color: black;
+  }
+  .project-card__text {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-weight:  700;
+  }
+
+  @media (max-width:1200px) { 
+    .project-wrapper {
+      flex-wrap: wrap;
+    }
+    .project-card {
+      flex-wrap: wrap;
+      width: 300px;
+    }
+   
   }
